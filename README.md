@@ -1,1 +1,1 @@
-# webpack-rules
+# webpack2-rules
