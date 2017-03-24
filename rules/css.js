@@ -12,25 +12,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(less|css)$/,
+        test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          use:[
-            {
-              loader: 'css-loader',
-              options:{
-                modules:true,
-                importLoaders:1,
-                localIdentName:'[local]_[hash:base64:5]',
-                sourceMap: true,
-              }
-            },
-            {
-              loader:'less-loader',
-              options:{
-                sourceMap: true,
-              }
-            },
-          ],
+          use:[ 'css-loader' ],
           fallback: 'style-loader',
         }),
       },
